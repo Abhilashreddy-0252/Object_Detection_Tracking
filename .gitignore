@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+ENV/
+
+# YOLO models & Weights
+models/
+weights/
+*.part
+
+# Media and Output files
+videos/
+output/
