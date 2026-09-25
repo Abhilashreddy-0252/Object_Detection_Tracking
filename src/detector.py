@@ -8,8 +8,9 @@ class YOLOv8Detector:
         self.confidence_threshold = confidence_threshold
         
         # Initialize YOLOv8 model
-        if not os.path.exists(os.path.dirname(self.model_path)):
-            os.makedirs(os.path.dirname(self.model_path), exist_ok=True)
+        model_dir = os.path.dirname(self.model_path)
+        if model_dir and not os.path.exists(model_dir):
+            os.makedirs(model_dir, exist_ok=True)
             
         print(f"Loading YOLO model from {self.model_path}...")
         try:
